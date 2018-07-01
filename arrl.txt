@@ -1,0 +1,101 @@
+cabrillo_id -- ARRL-SS-CW, ARRL-VHF-JUN, etc
+year -- year in yyyy format
+callsign -- callsign used on the air
+host_callsign -- used to be known as @<callsign>
+operators -- list of operators, blank separated, no punctuation
+    Note:  For example, a score coming from NN1N would have callsign, host_callsign and operators each set to NN1N
+    Note:  A multi-op score coming from WX3B that lists no operators would have callsign and host_callsign set to WX3B and operators set to NULL
+category_id -- HQ-CAT: from log
+section_id -- NULL -or- ARRL section abbreviation 
+dxcc_prefix -- NULL -or- DXCC prefix from AD1C's list
+    Note: every line score has either has a section_id OR a dxcc_prefix but not both, for example Puerto Rico is PR in Sweepstakes but KP4 in ARRL DX
+score
+q_total -- total QSOs
+m_total -- total multipliers
+late_log_flag -- 0 if log received before deadline OR callsign listed in Extensions.lis; 1 otherwise
+clb_abbr -- HQ-CLUB-ABBR: from log
+minutes_on -- minutes of on-time (if available)
+
+Then there are a bunch of items that we want depending on the contest.  By band QSO, multiplier, and point breakdowns like this:
+
+q_160
+q_80
+q_40
+q_20
+q_15
+q_10
+q_6m
+q_2m
+q_222
+q_432
+q_902
+q_1.2g
+q_2.3g
+q_3.4g
+q_5.7g
+q_10g
+q_24g
+q_47g
+q_75g
+q_123g
+q_134g
+q_241g
+q_light
+
+m_160
+m_80
+m_40
+m_20
+m_15
+m_10
+m_6m
+m_2m
+m_222
+m_432
+m_902
+m_1.2g
+m_2.3g
+m_3.4g
+m_5.7g
+m_10g
+m_24g
+m_47g
+m_75g
+m_123g
+m_134g
+m_241g
+m_light
+
+pts_6m
+pts_2m
+pst_222
+pts_432
+pts_902
+pts_1.2g
+pts_2.3g
+pts_3.4g
+pts_5.7g
+pts_10g
+pts_24g
+pts_47g
+pts_75g
+pts_123g
+pts_134g
+pts_241g
+pts_light
+
+Then there are other contest-specific items we may want, depending on the contest
+
+
+
+band_activated -- blank separated list of bands activated (no punctuation), formerly ABCD9...; use Cabrillo designations 6M, 2M, 1.2G, 24G, etc.
+bestdx10 -- 10 GHz+
+bestdx24 -- 10 GHz+
+bestdx47 -- 10 GHz+
+bestdx75 -- 10 GHz+
+bestdx300 -- 10 GHz+
+callsigns_worked -- 10 GHz+
+distance_points -- [can't remember]
+grid_activated -- VHF only, a list of grids activated
+longest -- 222+
+team -- 222+, team (not club)
